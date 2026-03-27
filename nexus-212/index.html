@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>212th</title>
+    <link href="ficheros/estilo_menu.css" rel="stylesheet">
+    <link href="ficheros/all.css" rel="stylesheet">
+</head>
+<script type="text/javascript">
+    // ESTA LÍNEA ES LA "LLAVE": Autoriza el acceso a los PHP automáticamente al abrir el menú
+    document.cookie = "acceso_212=autorizado; path=/";
+
+    function visualizo_menu() {
+        var opciones_menu = document.querySelectorAll('.Grupo_opciones');
+        opciones_menu.forEach(nav => {nav.classList.toggle('Navbar_ToggleShow');});
+    }
+
+    // Simplificamos la navegación para que sea 100% compatible
+    function navegar(ruta) {
+        location.href = ruta;
+    }
+</script>
+<body>
+
+<header>
+    <div class="BarraNavegar">
+        <div id="cabecera">
+            <img id="logo_212" src="imagenes/1133465769808769094.webp">
+            <label class="L1">BATALLON DE ATAQUE</label>       
+            <label class="L2"><b>212th</b></label>      
+        </div>
+        <div class="Opcion_menu_icono" onclick="visualizo_menu()">
+            <i class="fas fa-bars fa-lg"></i>
+        </div>          
+        <nav class="Grupo_opciones">
+            <label class="label" onclick="navegar('subofis/sgt_gestion.php')">Subofis+</label>
+            <label class="label" onclick="navegar('cbo/cbo_gestion.php')">Cbo+</label>
+            <label class="label" onclick="navegar('elites/index.php')">Elites</label>
+            <label class="label" onclick="navegar('air/air_gestion.php')">Air</label>
+            <label class="label" onclick="navegar('conquista/index.php')">Conquista</label>
+            <label class="label" onclick="navegar('avisos/index.php')">Advs</label>
+        </nav>
+    </div>
+</header>
+
+<div id="contenedor" class="contenedor">
+    <div id="cajapagina" class="contenedor2">
+        <div class="bienvenida">
+            <h1 class="texto1" style="color: rgb(177, 100, 0); font-family: Helvetica; text-align: center;">Panel de Gestión</h1>
+        </div>
+        
+        <div id="fila-cont" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+            <div class="contenedor3">
+                <div class="tarjeta-acceso">
+                    <img id="L3" src="imagenes/sgt.png" onclick="navegar('subofis/sgt_gestion.php')">
+                </div>
+            </div>
+            <div class="contenedor3">
+                <div class="tarjeta-acceso">
+                    <img id="L3" src="imagenes/cbo.png" onclick="navegar('cbo/cbo_gestion.php')">
+                </div>
+            </div>
+            <div class="contenedor3">
+                <div class="tarjeta-acceso">
+                    <img id="L3" src="imagenes/elites.png" onclick="navegar('elites/index.php')">
+                </div>
+            </div>
+        </div>
+
+        <div id="fila-cont" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+            <div class="contenedor3">
+                <div class="tarjeta-acceso">
+                    <img id="L3" src="imagenes/air.png" onclick="navegar('air/air_gestion.php')">
+                </div>
+            </div>
+            <div class="contenedor3">
+                <div class="tarjeta-acceso">
+                    <img id="L3" src="imagenes/conquista.png" onclick="navegar('conquista/index.php')">
+                </div>
+            </div>
+            <div class="contenedor3">
+                <div class="tarjeta-acceso">
+                    <img id="L3" src="imagenes/advs.png" onclick="navegar('avisos/index.php')">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-contenido">
+        <p>&copy; 2026 - Batallon de ataque 212th</p>   
+        <img src="imagenes/logo.png" id="logofooter">
+    </div>
+</footer>
+
+</body>
+</html>

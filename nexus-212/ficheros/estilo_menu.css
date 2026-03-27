@@ -1,0 +1,390 @@
+/* ============================================================
+   ESTILO TÁCTICO: BATALLÓN DE ATAQUE 212 - "NEXUS 212"
+   ============================================================ */
+
+:root {
+    --naranja-212: #FF9B00;         /* Naranja reglamentario de la 212 */
+    --naranja-glow: #ffaa004d;      /* Brillo para efectos */
+    --fondo-espacial: #ffffff;      /* Negro profundo */
+    --fondo-tarjeta: #ffffff;       /* Gris panel de control */
+    --texto-principal: #000000;     /* Blanco "Armadura" */
+    --texto-secundario: #8B949E;    /* Gris técnico */
+    --borde-tactico: #a0a0a0;       /* Borde de metal */
+}
+
+* { 
+    box-sizing: border-box; 
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    background-color: var(--fondo-espacial);
+    color: var(--texto-principal);
+    /* Fondo con un ligero patrón de rejilla táctica */
+    background-size: 30px 30px;
+
+    
+
+    
+}
+
+/* --- HEADER / BARRA DE NAVEGACIÓN --- */
+.BarraNavegar {
+    display: flex;
+    background-color: #000000; 
+    padding: 15px 40px;
+    color: rgb(255, 255, 255);
+    border-bottom: 3px solid var(--naranja-212); /* Línea distintiva del Batallón */
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
+    align-items: center;
+}
+
+#cabecera {
+    display: flex;
+    align-items: center;
+}
+
+#cabecera i {
+    color: var(--naranja-212); 
+    margin-right: 15px;
+    filter: drop-shadow(0 0 5px var(--naranja-212));
+}
+
+.L1 { 
+    font-size: 24px; 
+    font-weight: 800; 
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.L2 { 
+    font-size: 24px; 
+    color: var(--naranja-212); 
+    margin-left: 8px;
+    font-family: 'Courier New', Courier, monospace; /* Toque de datos */
+}
+
+.Grupo_opciones {
+    display: flex;
+    gap: 30px;
+    margin-left: auto;
+}
+
+.label {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--texto-secundario);
+}
+
+.label:hover { 
+    color: var(--naranja-212); 
+    text-shadow: 0 0 8px var(--naranja-glow);
+}
+
+.Opcion_menu_icono {
+    display: none;
+    color: var(--naranja-212);
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.contenedor { 
+    flex: 1; 
+    display: flex; 
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.contenedor2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1000px;
+    width: 100%;
+}
+
+#fila-cont{
+    display: flex;
+    flex-direction: row;
+}
+
+.bienvenida {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.texto1 {
+    font-family: 'Helvetica', sans-serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
+    background: linear-gradient(to bottom, #ff6600 0%, #a0a0a0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#logo_212{
+    width: 50px;
+    height: auto;
+}
+
+.texto2 {
+    color: var(--texto-secundario) !important;
+    font-size: 18px !important;
+    letter-spacing: 1px;
+    font-style: italic;
+}
+
+/* --- TARJETAS DE ACCESO (BOTONES) --- */
+.contenedor3 {
+    display: flex;
+    gap: 60px;
+    flex-direction: row; /* Cambiado a fila para que se vea más profesional */
+    padding: 20px;
+}
+
+.tarjeta-acceso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: var(--fondo-tarjeta);
+    border: 1px solid var(--borde-tactico);
+    border-radius: 12px;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.tarjeta-acceso::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 4px;
+    background: var(--naranja-212);
+    opacity: 0.5;
+}
+
+#logofooter{
+ width: 50px;
+ height: auto;
+ margin: auto;
+ padding: auto;
+}
+
+#L1, #L3 {
+    height: 150px; /* Ajustado para mejor proporción */
+    width: auto;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.tarjeta-acceso:hover {
+    border-color: var(--naranja-212);
+    box-shadow: 0 0 30px rgba(228, 228, 228, 0.1);
+    transform: translateY(-10px);
+    background: #ffffff;
+}
+
+.tarjeta-acceso:hover #L1, 
+.tarjeta-acceso:hover #L3 {
+    filter: grayscale(0) brightness(1.1);
+    transform: scale(1.05);
+}
+
+/* --- FOOTER TÁCTICO --- */
+footer {
+    background-color: #000000;
+    color: var(--texto-secundario);
+    padding: 15px 0;
+    text-align: center;
+    border-top: 1px solid var(--borde-tactico);
+}
+
+.footer-contenido p {
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.iconos-footer {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 22px;
+}
+
+.iconos-footer i {
+    transition: 0.3s;
+}
+
+.iconos-footer i:hover {
+    color: var(--naranja-212);
+    filter: drop-shadow(0 0 8px var(--naranja-212));
+}
+
+/* --- PANTALLA DE LOGIN (OVERLAY) --- */
+.login-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000; /* Asegura que esté por encima de todo */
+    transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Animación para cuando se quita el login */
+.login-screen.hidden {
+    opacity: 0;
+    transform: translateY(-100%); /* Se desliza hacia arriba */
+    pointer-events: none;
+}
+
+.login-terminal {
+    width: 100%;
+    max-width: 450px;
+    background: #ffffff;
+    border: 2px solid var(--naranja-212);
+    border-radius: 5px;
+    box-shadow: 0 0 40px rgba(255, 155, 0, 0.2);
+    padding: 30px;
+    text-align: center;
+}
+
+.terminal-header i {
+    font-size: 40px;
+    color: var(--naranja-212);
+    margin-bottom: 10px;
+}
+
+.terminal-header h2 {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin: 5px 0;
+}
+
+.terminal-header p {
+    color: var(--texto-secundario);
+    font-size: 12px;
+    margin-bottom: 25px;
+}
+
+.input-field {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.input-field label {
+    display: block;
+    color: var(--naranja-212);
+    font-size: 10px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.input-field input {
+    width: 100%;
+    background: #ffffff;
+    border: 1px solid #333;
+    padding: 15px;
+    color: var(--naranja-212);
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    outline: none;
+    border-radius: 3px;
+}
+
+.btn-terminal {
+    width: 100%;
+    padding: 15px;
+    background: var(--naranja-212);
+    color: rgb(255, 255, 255);
+    border: none;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-terminal:hover {
+    background: rgb(0, 0, 0);
+    box-shadow: 0 0 15px rgb(0, 0, 0);
+}
+
+.error-text {
+    color: #ff4444;
+    font-size: 11px;
+    margin-top: 15px;
+    font-weight: bold;
+    display: none; /* Oculto por defecto */
+}
+
+.terminal-footer {
+    margin-top: 30px;
+    font-size: 10px;
+    color: #afaeae;
+    border-top: 1px solid #b8b6b6;
+    padding-top: 10px;
+}
+
+/* --- RESPONSIVE (MÓVILES) --- */
+@media (max-width: 768px) 
+{
+    .BarraNavegar { 
+        padding: 15px;
+    }
+    
+    .contenedor3 { 
+        flex-direction: column; 
+        gap: 30px;
+    }
+    
+    .Grupo_opciones { 
+        display: none; 
+        background: var(--fondo-tarjeta);
+        width: 100%;
+        padding: 20px;
+        border-radius: 8px;
+        margin-top: 15px;
+    }
+    
+    .Navbar_ToggleShow { 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; 
+    }
+    
+    .Opcion_menu_icono {
+        display: block;
+        cursor: pointer;
+    }
+
+    #L1, #L3 {
+        height: 140px;
+    }
+    
+    .texto1 {
+        font-size: 28px;
+    }
+    #fila-cont{
+        flex-direction: column;
+    }
+}
